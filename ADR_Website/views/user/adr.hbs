@@ -1,0 +1,70 @@
+
+<h1 align="center"> <strong> ADR's List </strong> </h1>
+
+
+ <h4 align="center"> <div class="dropdown" align="center">
+  <button class="dropbtn" align="center">Select Application <i class="fas fa-arrow-circle-down"></i></button>
+
+  <div class="dropdown-content">
+        {{# each application}}
+              <a href="/user/adr/docs/{{this}}">{{this}}</a> 
+        {{/each}}      
+  </div>
+</div>
+</h4>
+
+<div class="row my-4"  style="padding-left:25px;">  
+  {{# each project }}
+  <div class="col-sm-4">       
+  <div class="card mt-3 my-4 text-center " style="width: 18rem;">
+
+    <div class="card-header bg-danger">
+    </div>
+
+    <div class="card-body text-center" >
+      <form action="/user/create_adr" method="get">
+      <div class = "col-md-12">
+      <p class="card-text"><strong>{{this.project}}</strong></p>
+      </div>
+      </form>
+    </div>
+
+    <div class="card-footer text-muted form-inline clearfix">
+    
+      <form action="/user/adr/{{this._id}}" method="get">
+      <button type="submit" class="btn bg-danger btn-primary-spacing" data-toggle="tooltip" data-placement="bottom" title="To view the {{this.project}} document">View</button>  
+          
+      </form>   
+      <form action="/user/adr/edit/{{this._id}}" method="get">
+      <button type="submit" class="btn bg-danger btn-primary-spacing" data-toggle="tooltip" data-placement="bottom" title="To update the {{this.project}} document">Edit</button>
+      </form>
+      <form action="/user/adr/{{this._id}}/delete" method="get">
+      <button type="submit" class="btn bg-danger btn-last-spacing" data-toggle="tooltip" data-placement="bottom" title="To delete the {{this.project}} document">Delete</button>   
+      </form>         
+    </div>  
+  </div>
+  </div>
+
+  {{/each}}
+  <div class="col-sm-4">       
+  <div class="card mt-3 my-4 text-center " style="width: 18rem;">
+  
+    <div class="card-header bg-info">
+    </div>
+
+    <div class="card-body text-center" >
+      <form action="/user/create_adr" method="get">
+      <div class = "col-md-12">
+         <p class="card-text"> <i class="fas fa-plus-circle fa-1x"></i> <strong>Create a New ADR</strong></p>
+      </div>
+    </div>
+
+    <div class="card-footer text-muted text-center">
+          <button type="submit" class="btn bg-info" data-toggle="tooltip" data-placement="bottom" title="Alright! you want a new document.">Create</button>            
+    </div>
+  </div>
+  </div>
+
+</div>
+
+

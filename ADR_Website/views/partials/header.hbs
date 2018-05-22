@@ -1,0 +1,43 @@
+
+<!-- Header -->
+<nav class="navbar navbar-dark bg-dark justify-content-center">
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1"></div>
+{{# if login}}
+  <!-- To Get the icon from font-awesome , fa-1x defines the size of the icon -->
+   <a class="navbar-brand" href="/"> 
+   <i class="fab fa-adn fa-1x" ></i>  
+    <!-- To Make the content Bold & Blue Color -->
+    <span class="text-info mr-auto">  
+        <strong> Welcome to ADR Website </strong>
+    </span>
+
+    
+    <!-- <ul class="nav navbar-nav ml-auto"> -->
+        <li class="dropdown ml-auto" style="padding-right:35px;">
+            <a href="#" class="dropdown-toggle" role="button" data-toggle="dropdown"><i class="fas fa-user fa-pull-left"></i>Hello User<span class="caret"></span>  
+            </a>  
+        <ul class="dropdown-menu bg-secondary">
+        <li><a href='#' class="text-white">Profile</a></li>
+        <li role="seperator" class="divider"></li>
+        <li><a href="/user/logout" class="text-white">Logout</a></li>
+        </ul>        
+        </li>
+    </ul>        
+    
+  </a>
+<!-- </nav>  -->
+{{ else }}
+<!-- Header -->
+<!-- <nav class="navbar navbar-dark bg-dark justify-content-center"> -->
+  <!-- To Get the icon from font-awesome , fa-1x defines the size of the icon -->
+  <a class="navbar-brand" href="#"> <i class="fab fa-adn fa-1x"></i> 
+    <!-- To Make the content Bold & Blue Color -->
+    
+    <span class="text-info">  
+        <strong> ADR Website </strong>
+    </span>
+  </a>
+  {{/if}}
+  </div>
+</nav>
+

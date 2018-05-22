@@ -1,0 +1,42 @@
+{
+  "name": "adr-website",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www",
+    "test": "node_modules/.bin/mocha -w --timeout 10000"
+  },
+  "engines": {
+    "node": "8.9.x",
+    "npm": "5.5.1"
+  },
+  "dependencies": {
+    "EventEmitter": "^1.0.0",
+    "bcrypt-nodejs": "0.0.3",
+    "body-parser": "~1.18.2",
+    "connect-flash": "^0.1.1",
+    "connect-mongo": "^2.0.1",
+    "cookie-parser": "~1.4.3",
+    "csurf": "^1.9.0",
+    "debug": "~2.6.9",
+    "express": "~4.15.5",
+    "express-handlebars": "^3.0.0",
+    "express-session": "^1.15.6",
+    "express-validator": "^4.3.0",
+    "hbs": "~4.0.1",
+    "mongoose": "^5.0.3",
+    "morgan": "~1.9.0",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0",
+    "popper.js": "^1.12.9",
+    "serve-favicon": "~2.4.5",
+    "tooltip.js": "^1.1.7"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "mocha": "^5.0.1",
+    "request": "^2.83.0",
+    "response": "^0.18.0",
+    "should": "^13.2.1"
+  }
+}

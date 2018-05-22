@@ -1,0 +1,31 @@
+
+<div class="row justify-content-center my-4">
+  <div class="col-sm-4">
+    <div class="card">
+    <div class="card-header text-center bg-info"><strong>Log-In</strong></div>
+        <div class="card-body text-center">        
+          {{#if hasErrors }}
+            <div class="alert alert-danger"> 
+                {{# each messages }}
+                    <p>{{this}}</p>
+                {{/each}}
+            </div>
+        {{/if}}
+        <form action="/user/login/" method="post">
+            <div class = "form-group col-md-8">
+                <label for="email" class="pull-left font-weight-bold">E-Mail</label>
+                <input type="text" class="form-control form-control-sm" id="email" name="email" class"form-control" placeholder="Enter a valid E-mail ID">
+            </div>
+            <div class = "form-group col-md-8">
+                <label for="password" class="pull-left font-weight-bold">Password</label>
+                <input type="password" class="form-control form-control-sm" id="password" name="password" class"form-control" placeholder="Enter a valid Password">
+            </div>
+            <input type="hidden" name="_csrf" value="{{ csrfToken }}">
+        </div>
+      
+      <div class="card-footer text-muted text-center">
+          <button type="submit" class="btn bg-info">Submit</button>            
+      </div>
+    </div>
+  </div>
+</div>

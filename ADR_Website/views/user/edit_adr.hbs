@@ -1,0 +1,51 @@
+
+<div class="container">
+
+    <div class="text-center">
+        <h1>Edit ADR</h1>
+    </div>
+
+ <form class="form-horizontal" action="/user/edit_adr" method="post">
+
+ <div class="input form-group">
+    <label class="col-md-4 control-label" for="id">ID</label>
+    <div class="col-md-4">
+    <input type="text" class="form-control form-control-sm" id="id" name="id" value={{adr._id}}>
+    </div>
+</div> 
+
+<div class="input form-group">
+    <label class="col-md-4 control-label" for="application">Application</label>
+    <div class="col-md-4">
+    <input type="text" class="form-control form-control-sm" id="application" name="application" value={{adr.application}}>
+    </div>
+</div> 
+
+<div class="input form-group">
+    <label class="col-md-4 control-label" for="project">Project</label>
+    <div class="col-md-4">
+    <input type="text" class="form-control form-control-sm" id="project" name="project" value={{adr.project}}>
+    </div>
+</div> 
+
+<div class="input form-group">
+    <label class="col-md-4 control-label" for="databaseused">Database Used</label>
+    <div class="col-md-4">
+    <input type="text" class="form-control form-control-sm" id="databaseused" name="databaseused" value={{adr.databaseused}}>
+    </div>
+</div> 
+
+
+<div class="input form-group">
+    <label class="col-md-4 control-label" for="databaseused">Database Preferred</label>
+    <div class="col-md-4">
+    <input type="text" class="form-control form-control-sm" id="databasepreferred" name="databasepreferred" value={{adr.databasepreferred}}>
+    </div>
+</div> 
+
+<input type="hidden" name="_csrf" value="{{ csrfToken }}">
+
+<button type="reset"  class="btn bg-success" value="Reset" data-toggle="tooltip" data-placement="bottom" title="Reset to Default values."> Reset </button>
+<button type="submit" class="btn bg-success" data-toggle="tooltip" data-placement="bottom" title="Oh! Are you sure to change the values."> Update </button>
+
+</form>
